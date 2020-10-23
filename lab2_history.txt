@@ -1,0 +1,47 @@
+./test:
+итого 16
+drw-rw-r-- 2 orm666 orm666 4096 окт 23 01:37 dir
+-rw-r----- 1 orm666 orm666    5 окт 23 01:36 file
+-rw------- 1 orm666 orm666    0 окт 23 01:41 file1
+-rw-rw-rw- 1 orm666 orm666    0 окт 23 01:41 file2
+
+./test/dir:
+итого 4
+-rw-rw-r-- 1 orm666 orm666 7 окт 23 01:37 new_file
+
+
+    1  cd ~
+    2  mkdir test && cd test
+    3  touch file
+    4  ls -l
+    5  chmod 0 file 
+    6  ls -l
+    7  echo "test" >> file 
+    8  cat ./file 
+    9  chmod u+w file 
+   10  echo "test" >> file 
+   11  ls -l
+   12  cat file 
+   13  chmod g+r file 
+   14  ls -l
+   15  cat ./file 
+   16  chmod u+r file 
+   17  cat ./file 
+   18  mkdir dir && touch ./dir/new_file && echo "file 2" >> ./dir/new_file
+   19  ls ./dir/
+   20  chmod ugo-x ./dir/
+   21  cat ./dir/new_file 
+   22  rm ./dir/new_file 
+   23  chown root file 
+   24  chgrp root file 
+   25  umask 077 
+   26  touch file1
+   27  ls -l
+   28  umask 0
+   29  touch file2
+   30  ls -l
+   31  cat file
+   32  sudo chmod g+r file
+   33  cat file
+   34  sudo ls -lR >> ~animals/lab2_history.txt 
+   35  history >> ~animals/lab2_history.txt 
