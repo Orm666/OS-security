@@ -1,0 +1,116 @@
+    1  whoami 
+    2  whoaim
+    3  whoami 
+    4  echo "Hello World"
+    5  date
+    6  cal
+    7  man cal
+    8  cal -3
+    9  history 
+   10  clear
+   11  pwd
+   12  cd /
+   13  cd ..
+   14  pwd
+   15  ls
+   16  ls /var
+   17  cd ~
+   18  cd ..
+   19  pwd
+   20  ls
+   21  ls -l
+   22  cd ~
+   23  mkdir fruits
+   24  cd /
+   25  mkdir ~/animals
+   26  touch /tmp/temp
+   27  cd ~/fruits/
+   28  touch apple
+   29  touch banana
+   30  touch pineaple
+   31  touch lion
+   32  touch ../animals/cat.txt
+   33  touch ../animals/dog.txt
+   34  touch ../animals/elephant.txt
+   35  date -r ./apple 
+   36  ls b*
+   37  ls *a
+   38  ls [bi]*
+   39  cp /etc/passwd ~
+   40  cat /etc/issue
+   41  cp /etc/issue ./apple 
+   42  cat ./apple 
+   43  mv ./lion ../animals/lion
+   44  mv pineaple pineapple
+   45  man wc
+   46  wc -w /etc/passwd
+   47  cd ~
+   48  ln -s /etc/passwd passwd_link
+   49  ln .bash_history history_hard
+   50  ls -l
+   51  ls -l .bash_history 
+   52  rm fruits/apple 
+   53  mkdir rmme
+   54  rmdir rmme/
+   55  rmdir fruits/
+   56  rm -fr fruits/
+   57  cat /etc/passwd
+   58  cat /var/log/boot.log 
+   59  cat /etc/passwd /var/log/boot.log
+   60  cp /etc/init.d/ ~
+   61  cp -r /etc/init.d/ ~
+   62  ls
+   63  rm -r ./init.d/
+   64  ls
+   65  cut -d : -f1 /etc/passwd | sort
+   66  cat /etc/passwd
+   67  cut -d : -f1,3 /etc/passwd | sort
+   68  cut -d : -f1,3 /etc/passwd | sort | column -ts:
+   69  cut -d : -f1,3 /etc/passwd | column -ts:
+   70  grep :/bin/bash /etc/passwd | wc -l
+   71  man grep
+   72  grep :/bin/bash /etc/passwd | cut -d : -f1 | sort -r
+   73  dpkg-query -Wf '${Installed-Size}: ${Package}\n' | sort -rn | head -n 25
+   74  dpkg-query -L man-db  | xargs -l du 2> /dev/null | sort -n
+   75  top -b -n1 | sort -k 12
+   76  top -b -n1 | tail -n+8 | cut -c7-| tr -s ' ' '\t' | cut -f11,5
+   77  cat /etc/passwd
+   78  sort -k 1 /etc/passwd | tr ":" " "
+   79  cat /etc/passwd
+   80  cut -d : -f1,7 /etc/passwd | sort -k 1 | column -s : -t
+   81  cd /usr/share/doc/git-man/
+   82  cat ./copyright | tr ' ' '\012'
+   83  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]'
+   84  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]'
+   85  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]'
+   86  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort
+   87  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c
+   88  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn 
+   89  cat ./copyright | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+   90  cat ./copyright | tr -cs '[:alpha:]' '\n'
+   91  cat ./copyright | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]'
+   92  cat ./copyright | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort 
+   93  cat ./copyright | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c
+   94  cat ./copyright | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+   95  tr '[:lower:]' '[:upper:]' < copyright |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+   96  tr -cs '[:alpha:]' '\n' < copyright | less | grep -E ........ | sort | uniq -c | sort -rn | head
+   97  tr -cs '[:alpha:]' '\n' < copyright | less | grep -E ....... | sort | uniq -c | sort -rn | head
+   98  tr -cs '[:alpha:]' '\n' < copyright | less | grep -E . | sort | uniq -c | sort -rn | head
+   99  clear
+  100  ping ya.ru
+  101  curl wttr.in
+  102  hostname -I
+  103  curl ifconfig.me
+  104  cd ~
+  105  wget https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README-ru.md
+  106  less ./README-ru.md 
+  107  rm ./README-ru.md 
+  108  id
+  109  whoami 
+  110  sudo id
+  111  cat /var/log/syslog
+  112  su
+  113  sudo su
+  114  su
+  115  cd ~/5\ semester/OS-security
+  116  history > lab1_history.txt
